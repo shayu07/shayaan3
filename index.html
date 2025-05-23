@@ -31,7 +31,6 @@
             <li><a href="#achievements">Achievements</a></li>
             <li><a href="#goals">Future Goals</a></li>
             <li><a href="#personal">Personal Side</a></li>
-            <li><a href="#shop">Shop</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -63,7 +62,7 @@
         <!-- About Me Section -->
         <section id="about" class="section box fade-in">
             <h2>About Me</h2>
-            <p><strong>Name:</strong> shayaan Kaularikar</p>
+            <p><strong>Name:</strong> Shayaan Kaularikar</p>
             <p><strong>Location:</strong> Boisar</p>
             <p><strong>Education:</strong> ST. John College Of Engineering & Management<br>Branch: Computer Engineering
             </p>
@@ -96,47 +95,15 @@
             <p><strong>Volunteering Experience:</strong> None yet</p>
         </section>
 
-        <!-- Shop Section -->
-        <section id="shop" class="section box">
-            <h2>My Shop</h2>
-
-            <!-- Add a wrapper for the product items -->
-            <div class="product-container">
-                <div class="product">
-                    <img src="tshirt.jpeg" alt="Vanhussen T-Shirt" width="150">
-                    <p><strong>Product:</strong> Vanhussen T-Shirt</p>
-                    <p><strong>Price:</strong> ₹499</p>
-                    <button onclick="addToCart('Vanhussen T-Shirt', 499)">Add to Cart</button>
-                </div>
-
-                <div class="product">
-                    <img src="sticker.jpeg" alt="Gucci Panda Sticker" width="150">
-                    <p><strong>Product:</strong> Gucci Panda Sticker</p>
-                    <p><strong>Price:</strong> ₹199</p>
-                    <button onclick="addToCart('Gucci Panda Sticker', 199)">Add to Cart</button>
-                </div>
-            </div>
-
-            <h3>Your Cart</h3><br>
-            <ul id="cart"></ul>
-            <h3>To order click here : <a href="#contact">Contact</a></h3>
-
-
-
-        </section>
-
-
         <!-- Contact Section -->
         <section id="contact" class="section box fade-in">
             <h2>Contact Me</h2>
             <form action="https://formsubmit.co/vikramchoudhary3107@gmail.com" method="POST">
                 <label for="email">Your Email:</label><br>
-                <textarea name="email" id="email" rows="1" placeholder="vikramchoudhary3107@gmail.com"
-                    required></textarea><br><br>
+                <textarea name="email" id="email" rows="1" placeholder="your@email.com" required></textarea><br><br>
 
                 <label for="message">Your Message:</label><br>
-                <textarea name="message" id="message" rows="5" placeholder="Write your message here..." required>
-                </textarea><br><br>
+                <textarea name="message" id="message" rows="5" placeholder="Write your message here..." required></textarea><br><br>
 
                 <iframe class="map-frame fade-in"
                     src="https://www.google.com/maps?q=Palghar,+Maharashtra,+India&output=embed">
@@ -150,7 +117,7 @@
         <footer class="footer fade-in">
             <p>Contact me at:</p>
             <p>Email: <a href="mailto:shayukaularikar@gmail.com">shayukaularikar@gmail.com</a></p>
-            <p>WhatsApp: <a href="https://wa.me/9130147768" target="_blank">9130147768/a></p>
+            <p>WhatsApp: <a href="https://wa.me/9130147768" target="_blank">9130147768</a></p>
             <p class="thank-you">Thanks for visiting my portfolio. Let's connect and build something amazing!</p>
         </footer>
 
@@ -171,25 +138,6 @@
         });
 
         faders.forEach(fader => observer.observe(fader));
-    </script>
-    <!-- Shopping Cart Script -->
-    <script>
-        const cart = [];
-
-        function addToCart(productName, price) {
-            cart.push({ name: productName, price: price });
-            displayCart();
-        }
-
-        function displayCart() {
-            const cartElement = document.getElementById('cart');
-            cartElement.innerHTML = '';
-            cart.forEach((item, index) => {
-                const li = document.createElement('li');
-                li.textContent = ${item.name} - ₹${item.price};
-                cartElement.appendChild(li);
-            });
-        }
     </script>
 
 </body>
